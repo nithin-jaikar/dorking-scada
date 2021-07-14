@@ -48,13 +48,10 @@ B =  """ intitle:"Miniweb Start Page"  """
 query = B
 #*****
 #*****
-f = open("/note.txt", "a")
 for gamma in search(query, tld=beta,stop=50, num=10,pause=2): 
-  print(colored ('[+] Found > ' ,'yellow')  + (gamma) )
-  f.write('\n[+] Found > ' + gamma)
+  print(colored ('[+] Found > ' ,'yellow')  + (gamma) ) 
 print(colored('[+] 60% done ', 'green')) #####
 print(colored('[+] Sleeping for 10s...', 'green'))
-f.close()
 time.sleep(5)
 
 luxs = random.choice(TLD)
@@ -73,12 +70,8 @@ for _ in range(100):
     time.sleep(0.1)
     sys.stdout.write('\b')
 #*****
-f = open("/note.txt", "a")
-for gamma in search(query, tld=betax, num=10,stop=50,pause=2):
+for gamma in search(query, tld=betax, num=10,stop=50,pause=2): 
      print(colored ('[+] Found > ' ,'yellow')  + (gamma) )
-     f.write('\n[+] Found > ' + gamma)
-
-f.close()
     
 print(colored('[+] 80% done ', 'green' )) 
 from Modes import Scada3

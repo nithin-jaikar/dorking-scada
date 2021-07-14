@@ -67,16 +67,13 @@ __/_____|___||__|||___|____|__________________________________________
  """
 
 print (NPP)
-name = input("Enter the name of the device: ")
-modname = input("Enter the module name of the device")
+
 TLD = ["com","com.tw","co.in"]
 beta = random.choice(TLD)
 betax = random.choice(TLD)
 print (" ")
 print(colored('[+] Searching... ', 'green')) 
 B =  """ intitle:"Rockwell Automation" "Device Name" "Uptime" """
-if name!="":
-    B=B.replace("Rockwell Automation",name)
 query = B
 # ****
 def spinning_cursor():
@@ -91,15 +88,10 @@ for _ in range(100):
     time.sleep(0.1)
     sys.stdout.write('\b')
 #*****
-f = open("/note.txt", "w")
-for gamma in search(query, tld=beta,stop=50, num=10,pause=2):
-    f.write('\n[+] Found > ' + gamma)
-    print(colored ('[+] Found > ' ,'yellow')  + (gamma) )
-print(colored('[+] 20% done ', 'green'))
-f.close()
+for gamma in search(query, tld=beta,stop=50, num=10,pause=2): 
+  print(colored ('[+] Found > ' ,'yellow')  + (gamma) )
+print(colored('[+] 20% done ', 'green')) 
 B = """ inurl:dtm.html intitle:1747-L551 """
-if modname!="":
-    B=B.replace("Rockwell Automation",modname)
 query = B
 # ****
 def spinning_cursor():
@@ -114,11 +106,7 @@ for _ in range(100):
     time.sleep(0.1)
     sys.stdout.write('\b')
 #*****
-f = open("/note.txt", "a")
 for gamma in search(query, tld=betax, num=10,stop=50,pause=2): 
-     print(colored ('[+] Found > ' ,'yellow')  + (gamma) )
-     f.write('\n[+] Found > ' + gamma)
+     print(colored ('[+] Found > ' ,'yellow')  + (gamma) )     
 print(colored('[+] 40% done ', 'green' )) # more scada dorks will be added here
-f.close()
-from Modes import Scada2
-
+from Modes import Scada2   

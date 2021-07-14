@@ -58,16 +58,12 @@ for _ in range(100):
     time.sleep(0.1)
     sys.stdout.write('\b')
 #*****
-f = open("/note.txt", "a")
 for gamma in search(query, tld=lux, num=10,stop=50,pause=2): 
-     print(colored ('[+] Found > ' ,'yellow')  + (gamma) )
-     f.write('\n[+] Found > ' + gamma)
-f.close()
+     print(colored ('[+] Found > ' ,'yellow')  + (gamma) )   
 print(colored('[+] 90% done ', 'green' ))
 print(colored('[+] 100% done ', 'green' ))
 print(colored('[+] done ', 'green' ))
 print(colored ('[! >] delete .google-cookie file in Katana DIR  ' ,'red')) 
-
 
 
 
